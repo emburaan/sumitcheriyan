@@ -71,7 +71,7 @@ class HomeDesktop extends StatelessWidget {
                   height: height * 0.04,
                 ),
                 AdaptiveText(
-                  "Muhammad",
+                  "Sumit",
                   style: GoogleFonts.montserrat(
                       fontSize: width < 1200 ? height * 0.085 : height * 0.095,
                       fontWeight: FontWeight.w100,
@@ -81,7 +81,7 @@ class HomeDesktop extends StatelessWidget {
                       letterSpacing: 4.0),
                 ),
                 AdaptiveText(
-                  "Hamza",
+                  "Cheriyan",
                   style: GoogleFonts.montserrat(
                       color: _themeProvider.lightTheme
                           ? Colors.black
@@ -111,8 +111,8 @@ class HomeDesktop extends StatelessWidget {
                                 : Colors.white,
                           ),
                           text: [
+                            " Android Developer",
                             " Flutter Developer",
-                            " Technical Writer",
                             " UI/UX Enthusiast"
                           ]),
                     ],

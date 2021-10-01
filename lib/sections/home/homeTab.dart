@@ -55,7 +55,7 @@ class HomeTab extends StatelessWidget {
                   height: height * 0.04,
                 ),
                 Text(
-                  "Muhammad",
+                  "Sumit",
                   style: GoogleFonts.montserrat(
                       fontSize: height * 0.07,
                       fontWeight: FontWeight.w100,
@@ -65,7 +65,7 @@ class HomeTab extends StatelessWidget {
                       letterSpacing: 1.5),
                 ),
                 Text(
-                  "Hamza",
+                  "Cheriyan",
                   style: GoogleFonts.montserrat(
                     fontSize: height * 0.07,
                     fontWeight: FontWeight.w500,
@@ -90,8 +90,8 @@ class HomeTab extends StatelessWidget {
                               : Colors.white,
                         ),
                         text: [
+                          " Android Developer",
                           " Flutter Developer",
-                          " Technical Writer",
                           " UI/UX Enthusiast"
                         ]),
                   ],

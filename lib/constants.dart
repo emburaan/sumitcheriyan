@@ -11,16 +11,14 @@ const kSocialIcons = [
   "https://img.icons8.com/android/480/ffffff/twitter.png",
   "https://img.icons8.com/metro/308/ffffff/linkedin.png",
   "https://img.icons8.com/material-rounded/384/ffffff/github.png",
-  "https://img.icons8.com/ios-filled/500/ffffff/medium-monogram--v1.png"
 ];
 
 const kSocialLinks = [
-  "https://facebook.com/mhmzdev",
-  "https://instagram.com/mhmzdev",
-  "https://twitter.com/mhmzdev",
-  "https://linkedin.com/in/mhmzdev",
-  "https://github.com/mhmzdev",
-  "https://mhamzadev.medium.com"
+  "https://www.facebook.com/sumit.cheriyan.5",
+  "https://www.instagram.com/coding_stalker/",
+  "https://twitter.com/cheriyan56",
+  "https://www.linkedin.com/in/sumit-cheriyan/",
+  "https://github.com/emburaan",
 ];
 
 // URL Launcher
