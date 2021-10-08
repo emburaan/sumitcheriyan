@@ -39,7 +39,7 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
-                  3,
+                  2,
                   (index) => Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: WidgetAnimator(
@@ -64,35 +64,6 @@ class _ServiceDesktopState extends State<ServiceDesktop> {
               ),
               SizedBox(
                 height: height * 0.04,
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  for (int index = 3; index < kServicesIcons.length; index++)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: WidgetAnimator(
-                        child: ServiceCard(
-                          cardWidth: width < 1200 ? width * 0.25 : width * 0.22,
-                          cardHeight:
-                              width < 1200 ? height * 0.37 : height * 0.35,
-                          serviceIcon: _themeProvider.lightTheme && index == 4
-                              ? "assets/services/open_b.png"
-                              : kServicesIcons[index],
-                          serviceTitle: kServicesTitles[index],
-                          serviceDescription: kServicesDescriptions[index],
-                          serviceLink: kServicesLinks[index],
-                          cardBack: ServiceCardBackWidget(
-                            serviceDesc: kServicesDescriptions[index],
-                            serviceTitle: kServicesTitles[index],
-                            themeProvider: _themeProvider,
-                            height: height,
-                            width: width,
-                          ),
-                        ),
-                      ),
-                    ),
-                ],
               ),
             ],
           )
@@ -134,36 +105,7 @@ class ServiceCardBackWidget extends StatelessWidget {
             height: width < 900 ? 1.5 : 1.8,
           ),
         ),
-        const SizedBox(height: 25.0),
-        MaterialButton(
-          hoverColor: kPrimaryColor.withAlpha(150),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5.0),
-              side: BorderSide(color: kPrimaryColor)),
-          onPressed: () {
-            serviceTitle == kServicesTitles[3]
-                ? launchURL(kServicesLinks[3])
-                : serviceTitle == kServicesTitles[4]
-                    ? launchURL(kServicesLinks[4])
-                    : Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => ServiceDetails(
-                            title: serviceTitle,
-                            dec: serviceDesc,
-                          ),
-                        ),
-                      );
-          },
-          child: Text(
-            "Details",
-            style: GoogleFonts.montserrat(
-              fontWeight: FontWeight.w300,
-              color: _themeProvider.lightTheme ? Colors.black : Colors.white,
-            ),
-          ),
-        ),
-        const SizedBox(height: 10.0),
+        const SizedBox(height: 50.0),
         Container(
           width: 250.0,
           height: 0.5,
@@ -171,108 +113,7 @@ class ServiceCardBackWidget extends StatelessWidget {
               _themeProvider.lightTheme ? Colors.grey[400] : Colors.grey[100],
         ),
         const SizedBox(height: 10.0),
-        SizedBox(
-          height: 40.0,
-          width: 150.0,
-          child: MaterialButton(
-            color: kPrimaryColor,
-            onPressed: () => showDialog(
-                context: context,
-                builder: (contecxt) => AlertDialog(
-                      backgroundColor: _themeProvider.lightTheme
-                          ? Colors.white
-                          : Colors.grey[900],
-                      title: AdaptiveText(
-                        "Hire Me!",
-                        style: TextStyle(
-                            fontSize: 32.0,
-                            color: _themeProvider.lightTheme
-                                ? Colors.black
-                                : Colors.white),
-                      ),
-                      actions: [
-                        TextButton(
-                            onPressed: () => Navigator.pop(context),
-                            child: Text("Back"))
-                      ],
-                      content: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CustomFilledBtn(
-                            height: 40.0,
-                            onPressed: () =>
-                                launchURL("https://wa.me/?text=Hi Hamza!"),
-                            btnColor: Color(0xff34CB62),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Icon(FontAwesomeIcons.whatsapp),
-                                const SizedBox(width: 8.0),
-                                Text("WhatsApp"),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(height: 20.0),
-                          CustomFilledBtn(
-                            height: 40.0,
-                            onPressed: () => launchURL(
-                                "https://www.upwork.com/freelancers/~0197b0f6aaeba9675f"),
-                            btnColor: Color(0xff13A800),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Image.network(
-                                  "https://img.icons8.com/ios-filled/50/000000/upwork.png",
-                                  height: 35.0,
-                                  color: Colors.white,
-                                ),
-                                const SizedBox(width: 8.0),
-                                Text("Upwork"),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    )),
-            child: Text(
-              "HIRE ME!",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16.0),
-            ),
-          ),
-        )
       ],
     );
   }
 }
-
-/*Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              InkWell(
-                                onTap: () => launchURL(kServicesLinks[0]),
-                                child: Image.asset(
-                                  'assets/services/fiverr.png',
-                                  height: 25.0,
-                                  color: _themeProvider.lightTheme
-                                      ? Colors.black
-                                      : Colors.green,
-                                ),
-                              ),
-                              const SizedBox(width: 30.0),
-                              InkWell(
-                                onTap: () => launchURL(
-                                    "https://www.upwork.com/freelancers/~0197b0f6aaeba9675f"),
-                                child: Image.network(
-                                  "https://img.icons8.com/ios-filled/50/000000/upwork.png",
-                                  height: 33.0,
-                                  color: _themeProvider.lightTheme
-                                      ? Colors.black
-                                      : Colors.green,
-                                ),
-                              ),
-                            ],
-                          )*/

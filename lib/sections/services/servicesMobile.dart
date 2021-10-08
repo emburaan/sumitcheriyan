@@ -20,7 +20,7 @@ class ServiceMobile extends StatelessWidget {
           CustomSectionSubHeading(
               text: "I may not be perfect, but I'm surely of some help :)\n\n"),
           CarouselSlider.builder(
-            itemCount: 5,
+            itemCount: 2,
             itemBuilder: (BuildContext context, int itemIndex, int i) =>
                 Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),

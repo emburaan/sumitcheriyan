@@ -35,7 +35,7 @@ class AboutDesktop extends StatelessWidget {
             children: [
               Expanded(
                 child: Image.asset(
-                  'assets/web.png',
+                  'assets/about_me.jpeg',
                   height: height * 0.7,
                 ),
               ),
@@ -55,7 +55,7 @@ class AboutDesktop extends StatelessWidget {
                         height: height * 0.03,
                       ),
                       AdaptiveText(
-                        "I'm Muhammad Hamza, a Flutter developer, Technical blog writer and UI designer.",
+                        "I'm Sumit Cheriyan,a Android developer, a Flutter developer and UI designer.",
                         style: GoogleFonts.montserrat(
                           fontSize: height * 0.035,
                           fontWeight: FontWeight.w400,
@@ -68,7 +68,7 @@ class AboutDesktop extends StatelessWidget {
                         height: height * 0.02,
                       ),
                       AdaptiveText(
-                        "I'm a Final Year Computer Science student enrolled in COMSATS University, Islamabad. I have been developing mobile apps for over 1.5 years now. I have worked in teams for various startups and helped them in launching their prototypes and got valuable learning experience. I'm an active Google Developer Student Clubs (DSC) lead and also CEO/Founder Flutter Islamabad, Pakistan.",
+                        "I am an Android & Flutter Developer with experience in Mobile Development and Web Technologies. In love with learning new technologies and using them to give solutions to real-world problems. What I like about what I do is that there is always something that is to be learned and that provides new ideas to solve other problems and that is a never-ending cycle",
                         style: GoogleFonts.montserrat(
                           fontSize: height * 0.02,
                           color: Colors.grey[500],
@@ -89,16 +89,35 @@ class AboutDesktop extends StatelessWidget {
                       SizedBox(
                         height: height * 0.02,
                       ),
-                      AdaptiveText(
-                        "Technologies I have worked with:",
-                        style: GoogleFonts.montserrat(
-                            color: kPrimaryColor, fontSize: height * 0.018),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Technologies I have worked with:",
+                          style: GoogleFonts.montserrat(
+                              color: kPrimaryColor, fontSize: height * 0.015),
+                        ),
                       ),
                       Row(
                         children: [
                           for (int i = 0; i < kTools.length; i++)
                             ToolTechWidget(
                               techName: kTools[i],
+                            ),
+                        ],
+                      ),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Designing tools i have worked with:",
+                          style: GoogleFonts.montserrat(
+                              color: kPrimaryColor, fontSize: height * 0.015),
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          for (int i = 0; i < dTools.length; i++)
+                            ToolTechWidget(
+                              techName: dTools[i],
                             ),
                         ],
                       ),
@@ -121,11 +140,11 @@ class AboutDesktop extends StatelessWidget {
                         children: [
                           AboutMeMetaData(
                             data: "Name",
-                            information: "Muhammad Hamza",
+                            information: "Sumit Cheriyan",
                           ),
                           AboutMeMetaData(
                             data: "Email",
-                            information: "hamza.6.shakeel@gmail.com",
+                            information: "Sumit.cheriyan56@gmail.com",
                           ),
                         ],
                       ),
@@ -139,7 +158,7 @@ class AboutDesktop extends StatelessWidget {
                             child: OutlinedCustomBtn(
                               onPressed: () {
                                 html.window.open(
-                                    'https://drive.google.com/file/d/1GF-wtbu2ob_Uxhw2In2QA8QiYi3XjCj1/view?usp=sharing',
+                                    'https://drive.google.com/file/d/1oLGbxpDD2IAmcdPCMVBE7aGHKoHKjwCh/view?usp=sharingE',
                                     "pdf");
                               },
                               btnText: "Resume",
@@ -154,12 +173,6 @@ class AboutDesktop extends StatelessWidget {
                               ),
                             ),
                           ),
-                          for (int i = 0; i < kCommunityLogo.length; i++)
-                            CommunityIconBtn(
-                              icon: kCommunityLogo[i],
-                              link: kCommunityLinks[i],
-                              height: _communityLogoHeight[i],
-                            ),
                         ],
                       ),
                     ],

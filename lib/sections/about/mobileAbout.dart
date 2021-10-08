@@ -30,9 +30,27 @@ class AboutMobile extends StatelessWidget {
         children: [
           CustomSectionHeading(text: "\nAbout Me"),
           CustomSectionSubHeading(text: "Get to know me :)"),
-          Image.asset(
-            'assets/mob.png',
-            height: height * 0.27,
+          SizedBox(
+            height: height * 0.02,
+          ),
+          Stack(
+            alignment: Alignment.center,
+            children: [
+              CircleAvatar(
+                radius: 42,
+                backgroundColor: Colors.deepOrangeAccent,
+                // Optional as per your use case
+                // minRadius: 30,
+                // maxRadius: 70,
+              ),
+              CircleAvatar(
+                radius: 40,
+                backgroundImage: ExactAssetImage('assets/about_me.jpeg'),
+                // Optional as per your use case
+                // minRadius: 30,
+                // maxRadius: 70,
+              )
+            ],
           ),
           SizedBox(
             height: height * 0.03,
@@ -51,7 +69,7 @@ class AboutMobile extends StatelessWidget {
             height: height * 0.028,
           ),
           Text(
-            "I'm Muhammad Hamza, a Flutter developer, Technical blog writer and UI designer.",
+            "I'm Sumit Cheriyan,a Android developer, a Flutter developer and UI designer.",
             style: GoogleFonts.montserrat(
               fontSize: height * 0.022,
               fontWeight: FontWeight.w400,
@@ -62,7 +80,7 @@ class AboutMobile extends StatelessWidget {
             height: height * 0.02,
           ),
           Text(
-            "I'm a Final Year Computer Science student enrolled in COMSATS University, Islamabad. I have been developing mobile apps for over 1.5 years now. I have worked in teams for various startups and helped them in launching their prototypes and got valuable learning experience. I'm an active Google Developer Student Clubs (DSC) lead and also CEO/Founder Flutter Islamabad, Pakistan.",
+            "I am an Android & Flutter Developer with experience in Mobile Development and Web Technologies. In love with learning new technologies and using them to give solutions to real-world problems. What I like about what I do is that there is always something that is to be learned and that provides new ideas to solve other problems and that is a never-ending cycle",
             style: GoogleFonts.montserrat(
               fontSize: height * 0.018,
               color: Colors.grey[500],
@@ -92,17 +110,25 @@ class AboutMobile extends StatelessWidget {
           ),
           Row(
             children: [
-              for (int i = 0; i < 4; i++)
+              for (int i = 0; i < kTools.length; i++)
                 ToolTechWidget(
                   techName: kTools[i],
                 ),
             ],
           ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "Designing tools i have worked with:",
+              style: GoogleFonts.montserrat(
+                  color: kPrimaryColor, fontSize: height * 0.015),
+            ),
+          ),
           Row(
             children: [
-              for (int i = 4; i < 8; i++)
+              for (int i = 0; i < dTools.length; i++)
                 ToolTechWidget(
-                  techName: kTools[i],
+                  techName: dTools[i],
                 ),
             ],
           ),
@@ -121,12 +147,12 @@ class AboutMobile extends StatelessWidget {
           ),
           AboutMeMetaData(
             data: "Name",
-            information: "Muhammad Hamza",
+            information: "Sumit Cheriyan",
             alignment: Alignment.centerLeft,
           ),
           AboutMeMetaData(
             data: "Email",
-            information: "hamza.6.shakeel@gmail.com",
+            information: "sumit.cheriyan56@gmail.com",
             alignment: Alignment.centerLeft,
           ),
           SizedBox(
@@ -143,10 +169,10 @@ class AboutMobile extends StatelessWidget {
                       onPressed: () {
                         kIsWeb
                             ? html.window.open(
-                                'https://drive.google.com/uc?export=view&id=1OOdcdGEN3thVvpZ4cl_MM0LT-GCMuLIE',
+                                'https://drive.google.com/file/d/1oLGbxpDD2IAmcdPCMVBE7aGHKoHKjwCh/view?usp=sharing',
                                 "pdf")
                             : launchURL(
-                                'https://drive.google.com/uc?export=view&id=1OOdcdGEN3thVvpZ4cl_MM0LT-GCMuLIE');
+                                'https://drive.google.com/file/d/1oLGbxpDD2IAmcdPCMVBE7aGHKoHKjwCh/view?usp=sharing');
                       }),
                 ),
                 Container(
@@ -159,16 +185,6 @@ class AboutMobile extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-          Row(
-            children: [
-              for (int i = 0; i < kCommunityLogo.length; i++)
-                CommunityIconBtn(
-                  icon: kCommunityLogo[i],
-                  link: kCommunityLinks[i],
-                  height: _communityLogoHeight[i],
-                ),
-            ],
           ),
         ],
       ),

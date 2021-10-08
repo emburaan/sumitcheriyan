@@ -44,7 +44,7 @@ class PortfolioMobileTab extends StatelessWidget {
           OutlinedCustomBtn(
               btnText: "See More",
               onPressed: () {
-                launchURL("https://github.com/mhmzdev");
+                launchURL("https://github.com/emburaan");
               })
         ],
       ),

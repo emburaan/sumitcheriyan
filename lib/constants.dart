@@ -42,12 +42,12 @@ final kCommunityLinks = [
 final kTools = [
   "Flutter",
   "Dart",
-  "Python",
   "Java",
-  "C++",
-  "HTML",
-  "CSS",
-  "Bootstrap"
+];
+
+final dTools = [
+  "Adobe Xd",
+  "Figma",
 ];
 
 // services
@@ -76,7 +76,7 @@ final kServicesTitles = [
 // ];
 
 final kServicesDescriptions = [
-  "Android app development via Flutter\n- Splash Screen\n- Firebase Auth/Cloud\n- REST APIs\n- Maps integration and more...!",
+  "Android app development via Flutter\n- Splash Screen\n- Firebase Auth/Cloud\n- REST APIs",
   "Modern UI/UX Designing\n- Adobe XD\n- Mobile & Web designs\n- Interactive UI designs\n- Responsiveness\n- Promo Videos and more..!",
   "Rapid Prototype via Flutter\n- Working MVP\n- Quick & Working prototype",
   "Technical Blog writing\n- Medium blogs\n- Soothing header images\n- SEO friendly\n- Researched topics and more..!",
@@ -165,7 +165,7 @@ final kContactTitles = [
 ];
 
 final kContactDetails = [
-  "Attock, Pakistan",
-  "(+92) 346 0159889",
-  "hamza@mhmz.dev"
+  "Mumbai, India",
+  "(+91) 70213 49665",
+  "sumit.cheriyan56@gmail.com"
 ];
