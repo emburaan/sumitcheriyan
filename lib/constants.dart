@@ -43,6 +43,7 @@ final kTools = [
   "Flutter",
   "Dart",
   "Java",
+  "kotlin"
 ];
 
 final dTools = [
